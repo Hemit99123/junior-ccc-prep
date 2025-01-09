@@ -1,3 +1,9 @@
+# Hemit Patel
+# 781159
+# ICS3U0-4
+# MR VEERA
+# good groups
+
 x = int(input())
 
 must_be_together = {}
