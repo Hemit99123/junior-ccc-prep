@@ -29,4 +29,9 @@ for _ in range(g):
 
     # check the 2 constriants of people that must be together and musn't be together
 
-    
+    for member in group:
+        if (member in must_be_together):
+            # do something
+        elif (member in not_be_together):
+            # do something
+            
