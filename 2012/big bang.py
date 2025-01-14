@@ -20,7 +20,6 @@ for p in range(len(encoded)):
 
     # we are finding the position of letter relative to the alphabet 
     #(this way we can shift from that pos)
-
     current_pos = alphabet.index(letter)
 
     # now based on the current position, shift backwards since we are decoding 
