@@ -12,10 +12,20 @@ encoded = input()
 decoded = ""
 
 for p in range(len(encoded)):
+
+    # p will start at value 0, however our formula (3p*k) 
+    # needs p to start at value 1
     position = p + 1 
     letter = encoded[p]
+
+    # we are finding the position of letter relative to the alphabet 
+    #(this way we can shift from that pos)
+
     current_pos = alphabet.index(letter)
-    original_pos = (current_pos - (3*position + k)) % 26
+
+    # now based on the current position, shift backwards since we are decoding 
+    # there are times where this will yield negative values but python is equipped to handle with that
+    original_pos = (current_pos - (3*position + k))
     decoded += alphabet[original_pos]
 
 print(decoded)
