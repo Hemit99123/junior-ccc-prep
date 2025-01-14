@@ -1,8 +1,8 @@
 # Hemit Patel
-# STUDENT NAME
-# ICS3U0-1 (Course code)
+# 781159
+# ICS3U0-4
 # J1 2023 Solution
-# TEACHER NAME
+# mr veera
 # 21 sep 2024
 
 # Number of days (input)
