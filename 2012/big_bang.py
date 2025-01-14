@@ -18,6 +18,7 @@ for p in range(len(encoded)):
     current_pos = alphabet.index(letter)
     # Calculate the original position by working backwards
     # Add 26 before taking modulo to handle negative numbers correctly
+    # p starts at 0 and therefore we must add one to it
     original_pos = (current_pos - (3*(p+1) + k) + 26*100) % 26
     decoded += alphabet[original_pos]
 
