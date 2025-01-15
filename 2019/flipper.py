@@ -6,32 +6,23 @@
 # 15 jan 2025
 
 instructions = input()
+grid = ["1", "2", "3", "4"]
 
-top = ["1","2"]
-bottom = ["3","4"]
+def flip_horizonal(grid):
+    new_grid = [grid[2], grid[3], grid[0], grid[1]]
 
-def flip_horizonal(top, bottom):
-    new_bottom = top
-    new_top = bottom
+    return new_grid
 
-    return new_bottom, new_top
-
-def flip_vertical(top, bottom):
-    new_bottom = [bottom[1], bottom[0]]
-    new_top = [top[1], top[0]]
-
-    return new_bottom, new_top
+def flip_vertical(grid):
+    new_grid = [grid[1], grid[0], grid[3], grid[2]]
+    return new_grid
 
 for instruction in instructions:
     if (instruction == "H"):
-        result = flip_horizonal(top, bottom)
-        bottom = result[0]
-        top = result[1]
+        grid = flip_horizonal(top, bottom)
     
     elif (instruction == "V"):
-        result = flip_vertical(top, bottom)
-        bottom = result[0]
-        top = result[1]
+        grid = flip_vertical(top, bottom)
 
-print(" ".join(top))
-print(" ".join(bottom))
+print(" ".join([grid[0], grid[1]]))
+print(" ".join([grid[2], grid[3]))
