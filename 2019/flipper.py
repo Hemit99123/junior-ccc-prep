@@ -10,7 +10,6 @@ grid = ["1", "2", "3", "4"]
 
 def flip_horizonal(grid):
     new_grid = [grid[2], grid[3], grid[0], grid[1]]
-
     return new_grid
 
 def flip_vertical(grid):
