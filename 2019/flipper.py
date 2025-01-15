@@ -24,5 +24,5 @@ for instruction in instructions:
     elif (instruction == "V"):
         grid = flip_vertical(top, bottom)
 
-print(" ".join([grid[0], grid[1]]))
+print(" ".join([grid[0], grid[1]))
 print(" ".join([grid[2], grid[3]))
