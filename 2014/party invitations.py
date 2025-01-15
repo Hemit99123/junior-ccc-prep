@@ -2,14 +2,25 @@ def party_invitation():
     # Input
     N = int(input())  # Total number of people
     K = int(input())  # Number of rounds
-    rounds = [int(input()) for _ in range(K)]  # The R values for each round
+    rounds = []
+    for _ in range(K):
+        R = int(input())
+        rounds.append(R)
     
     # Initial invitees list
-    invitees = list(range(1, N + 1))
+    invitees = []
+    for i in range(1, N + 1):
+        invitees.append(i)
     
     # Process each round
     for R in rounds:
-        invitees = [person for i, person in enumerate(invitees) if (i + 1) % R != 0]
+        new_invitees = []
+        index = 1  # To track positions (1-based index)
+        for person in invitees:
+            if index % R != 0:  # If not divisible by R, keep the person
+                new_invitees.append(person)
+            index += 1
+        invitees = new_invitees  # Update invitees to the filtered list
     
     # Output the remaining invitees
     for person in invitees:
