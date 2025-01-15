@@ -17,7 +17,7 @@ def party_invitation():
         new_invitees = []
         index = 1  # To track positions (1-based index)
         for person in invitees:
-            if index % R != 0:  # If not divisible by R, keep the person
+            if index % R != 0:  # If not divisible by R, keep the person because it is not a multiple 
                 new_invitees.append(person)
             index += 1
         invitees = new_invitees  # Update invitees to the filtered list
