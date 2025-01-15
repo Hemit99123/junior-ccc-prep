@@ -19,10 +19,10 @@ def flip_vertical(grid):
 
 for instruction in instructions:
     if (instruction == "H"):
-        grid = flip_horizonal(top, bottom)
+        grid = flip_horizonal(grid)
     
     elif (instruction == "V"):
-        grid = flip_vertical(top, bottom)
+        grid = flip_vertical(grid)
 
-print(" ".join([grid[0], grid[1]))
-print(" ".join([grid[2], grid[3]))
+print(" ".join([grid[0], grid[1]]))
+print(" ".join([grid[2], grid[3]]))
