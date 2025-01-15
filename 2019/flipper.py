@@ -6,9 +6,10 @@
 # 15 jan 2025
 
 instructions = input()
-top = [1,2]
-bottom = [3,4]
-for (instruction in instructions):
+top = ["1","2"]
+bottom = ["3","4"]
+
+for instruction in instructions:
     if (instruction == "H"):
         new_bottom = [top[0], top[1]]
         new_top = [bottom[0], bottom[1]]
@@ -23,5 +24,5 @@ for (instruction in instructions):
         top = new_top
         bottom = new_bottom
 
-print(top)
-print(bottom)
+print(" ".join(top))
+print(" ".join(bottom))
