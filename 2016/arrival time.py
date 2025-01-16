@@ -14,6 +14,8 @@ EVENING_RUSH_END = 19 * 60   # 19:00
 
 # Get input time and convert to minutes since midnight
 time_input = input().split(":")
+
+# Convert to minutes so its easier to handle and compute with
 current_time = int(time_input[0]) * 60 + int(time_input[1])
 
 # Normal commute takes 240 minutes (4 hours) in rush hour time
@@ -27,11 +29,16 @@ while remaining_progress > 0:
     # Check if current time is during rush hour
     is_rush_hour = (MORNING_RUSH_START < current_time < MORNING_RUSH_END or 
                    EVENING_RUSH_START < current_time < EVENING_RUSH_END)
-    
+
     if is_rush_hour:
         remaining_progress -= 1  # In rush hour, 1 minute of progress
     else:
         remaining_progress -= 2  # Outside rush hour, 2 minutes of progress
+    
+    # Rush hour has 1 minute of progress whilst non rush hour has 2 mins because progress is HALF the amount in rush traffic
+
+    # Update to new time, always assume one minute has passed even with 2 mins of progress have been completed
+    # This is because the road traffic conditions within non rush hours is better therefore more progress can be made
     
     current_time += 1
     
@@ -52,6 +59,8 @@ if current_time % 10 == 9:
 hours = (current_time // 60) % 24 
 minutes = current_time % 60
 
-# Format output time as HH:MM
+# Format output time back to HH:MM format using f strings (same as format function)
+
 arrival_time = f"{hours:02d}:{minutes:02d}"
+
 print(arrival_time)
