@@ -27,7 +27,7 @@ def time_to_digits(hours, minutes):
     time = []
 
     for time in time_str:
-      if (time !== ":"):
+      if (time != ":"):
         time.append(int(time))
         
     return time
