@@ -23,14 +23,7 @@ def time_to_digits(hours, minutes):
     time_str = f"{hours}:{minutes:02d}"
     
     # Convert to list of integers
-
-    time = []
-
-    for time in time_str:
-      if (time != ":"):
-        time.append(int(time))
-        
-    return time
+    return [int(d) for d in time_str if d != ':']
 
 def solve(D):
     # Handle cases where D > 720 (one full cycle)
